@@ -30,9 +30,9 @@ jobs:
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/simple-service:latest
 
-  # deploy:
-  #   needs: push-to-registry
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Deploy latest image tag in Render
-  #       run: curl "${{ secrets.DEPLOY_WEBHOOK_URL }}&imgURL=docker.io%2F${{ vars.DOCKERHUB_USERNAME }}%2Fsimple-service%3Alatest"
+  deploy:
+    needs: push-to-registry
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy latest image tag in Render
+        run: curl "${{ secrets.DEPLOY_WEBHOOK_URL }}&imgURL=docker.io%2F${{ vars.DOCKERHUB_USERNAME }}%2Fsimple-service%3Alatest"
