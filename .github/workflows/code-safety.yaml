@@ -17,35 +17,35 @@ jobs:
 
       - uses: ./.github/actions/minimize-uv-cache
 
-  # check-formatter:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
+  check-formatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: ./.github/actions/setup-python-uv
+      - uses: ./.github/actions/setup-python-uv
 
-  #     - run: uv run ruff format --check .
+      - run: uv run ruff format --check .
 
-  #     - uses: ./.github/actions/minimize-uv-cache
+      - uses: ./.github/actions/minimize-uv-cache
 
-  # check-type-safety:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
+  check-type-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: ./.github/actions/setup-python-uv
+      - uses: ./.github/actions/setup-python-uv
 
-  #     - run: uv run pyright
+      - run: uv run pyright
 
-  #     - uses: ./.github/actions/minimize-uv-cache
+      - uses: ./.github/actions/minimize-uv-cache
 
-  # run-unit-tests:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
+  run-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: ./.github/actions/setup-python-uv
+      - uses: ./.github/actions/setup-python-uv
 
-  #     - run: uv run pytest
+      - run: uv run pytest
 
-  #     - uses: ./.github/actions/minimize-uv-cache
+      - uses: ./.github/actions/minimize-uv-cache
