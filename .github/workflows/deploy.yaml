@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   code-safety:
-    uses: ./.github/workflows/code-safety.yml
+    uses: ./.github/workflows/code-safety.yaml
 
   push-to-registry:
     needs: code-safety
