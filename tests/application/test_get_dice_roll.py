@@ -1,6 +1,6 @@
 from app.application.get_dice_roll import get_dice_roll
 
-EXPECTED_DICE_COUNT = 2
+EXPECTED_DICE_COUNT = 3
 VALID_DICE_VALUES = {1, 2, 3, 4, 5, 6}
 
 
